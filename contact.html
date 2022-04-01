@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            E-Commerce About Us
+        </title>
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="style.css">
+
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+        
+
+    </head>
+
+    <body>
+
+        <nav class="nav nav_top">
+            <div class="logo">
+                <a href="#"><img src="Logo.jpg" width="50"></a>
+                <a href="#">VENUS FURNITURES</a>
+             </div>
+            <div class="nav_side">
+                <a href="E-commerce.html">Home</a>
+                <a href="Login.html">Login/Sign up</a>    
+                <a href="Register.html">Register</a>
+                <a href="about.html">About Us</a>
+                <a href="service.html">Services</a>
+                <a href="contact.html">Contact</a>
+                
+            </div>
+        </nav>
+
+        <div class="contact_container">
+            <h2>Contact Us</h2>
+            <div class="g_map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15074.489696214094!2d72.9993739!3d19.1679981!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfd3a5d21215da4e7!2sVenus%20Furniture%20Private%20Limited!5e0!3m2!1sen!2sin!4v1647528955103!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="contact_content">
+                <p><b>Address: Mumbai,India</b></p>
+                <p><b>Call: +919929783465</b></p>
+                <p><b>Mail: support@venus.ai</b></p>
+            </div>
+        </div>
+
+        <div class="feed">
+            <h2>WRITE A REVIEW</h2>
+            <div class="feed_form">
+                <form name="submit-google-sheet" method="POST">
+                    <input type="text" name="Name" placeholder="Name"><br>
+                    <input type="email" name="Email ID" placeholder="Email ID"><br>
+                    <input type="number" name="Number" placeholder="Contact Number"><br>
+                    <textarea placeholder="Type Your Review Here" rows="5" cols="7" name="Review"></textarea><br>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer_logo">
+                <a href="E-commerce.html"><img src="Logo.jpg" width="150"></a>
+            </div>
+            <div class="pages">
+                <h3>Pages</h3>
+                <a href="E-commerce.html">Home</a>|
+                <a href="Login.html">Login/Sign up</a>|   
+                <a href="Register.html">Register</a>|
+                <a href="about.html">About Us</a>|
+                <a href="service.html">Services</a>
+                
+            </div>
+            <div class="doc">
+                <h3>Documents</h3>
+                <a href="">Privacy Policy</a>|
+                <a href="">Terms Of Service</a>|
+                <a href="">Refund Policy</a>
+            </div>
+            <div class="social">
+                <h3>Follow Us</h3>
+                <a href="https://www.facebook.com/pages/category/Education-Website/1Stopai-102490171820303/" target="_black"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/company/1stop-ai/?originalSubdomain=in" target="_black"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/1stop.ai/?hl=en" target="_black"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://twitter.com/onestopai?lang=en" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            </div>
+            <div class="contact">
+                <h3>Contact Us</h3>
+                <a href="https://api.WhatsApp.com/send?phone=+919929783465" target="_black"><i class="fa fa-user" aria-hidden="true"></i></a>
+                <a href="tel: +919929783465"><i class="fa fa-mobile" aria-hidden="true"></i></a>
+                <a href="mailto: support@1stop.ai"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+            </div>
+            <hr>
+            <p>Copyright &copy; 2021 Create. All rights reserved</p>
+        </footer>
+
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwMeqdDvbjTh7iAngD2gMdVQCZoAAMYxzqk1ID-aqThr9Vl5P8kttdWhCDoidQvog/exec'
+            const form = document.forms['submit-google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Review successfully submitted"))
+                .catch(error => console.error('Error!', error.message))
+            })
+        </script>
+    </body>
+</html>

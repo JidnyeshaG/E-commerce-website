@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            E-Commerce | About Us
+        </title>
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="style.css">
+
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+    </head>
+
+    <body>
+
+        <nav class="nav nav_top" id="abt">
+            <div class="logo">
+                <a href="#"><img src="Logo.jpg" width="50"></a>
+                <a href="#">VENUS FURNITURES</a>
+             </div>
+            <div class="nav_side active">
+                <a href="E-commerce.html">Home</a>
+                <a href="Login.html">Login/Sign up</a>    
+                <a href="Register.html">Register</a>
+                <a href="about.html">About Us</a>
+                <a href="service.html">Services</a>
+                <a href="contact.html">Contact</a>
+                
+                
+            </div>
+        </nav>
+
+        <!--<nav class="nav nav_top">
+            <div class="logo">
+               <a href="E-commerce.html"><img src="image.png" width="150"></a>
+            </div>
+            <div class="nav_side">
+                <a href="about.html">About Us</a>
+                <a href="service.html">Services</a>
+                <a href="blog.html">Blogs</a>
+                <a href="contact.html">Contact</a>
+                <a href="login.html">Login/Sign up</a>    
+                <a href="register">Register</a>
+            </div>
+        </nav>-->
+
+        <div class="about_us">
+            <h2>About Us</h2>
+            <div class="about_content">
+                <p>Venus is India’s premium furniture brand in both home and institutional segments with a 
+                    strong commitment to sustainability and centers of excellence in design, manufacturing and retail.<br>
+                    Led by the largest in-house design team in the country in the furniture category and awarded with 34 
+                    India Design Mark Awards till date, Venus aims to transform spaces with its thoughtfully designed 
+                    furniture to create brighter homes and offices with products that have the highest design quotient in 
+                    aesthetics, functionality and technology. With consistent pursuit of excellence and a special focus on health 
+                    and ergonomics, Venus Interio’s product portfolio comprises a massive range in the home, office and 
+                    other specialized applications.</p>
+            </div>
+
+            <hr>
+            
+            <h2>Our Mission</h2>
+            <p>Venus Consumers Products is committed to protect its stakeholders' interest by offering the best services 
+               to its consumers. The company aims to serve its clientele with pioneering and cost-effective solutions to 
+               cater to their daily needs and uplift the quality of living as well.</p>
+        </div>
+
+        <div class="feed">
+            <h2>WRITE A REVIEW</h2>
+            <div class="feed_form">
+                <form name="submit-google-sheet" method="POST">
+                    <input type="text" name="Name" placeholder="Name"><br>
+                    <input type="email" name="Email ID" placeholder="Email ID"><br>
+                    <input type="number" name="Number" placeholder="Contact Number"><br>
+                    <textarea placeholder="Type Your Review Here" rows="5" cols="7" name="Review"></textarea><br>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer_logo">
+                <a href="E-commerce.html"><img src="Logo.jpg" width="150"></a>
+            </div>
+            <div class="pages">
+                <h3>Pages</h3>
+                <a href="E-commerce.html">Home</a>|
+                <a href="Login.html">Login/Sign up</a>|   
+                <a href="Register.html">Register</a>|
+                <a href="about.html">About Us</a>|
+                <a href="service.html">Services</a>
+                
+            </div>
+            <div class="doc">
+                <h3>Documents</h3>
+                <a href="">Privacy Policy</a>|
+                <a href="">Terms Of Service</a>|
+                <a href="">Refund Policy</a>
+            </div>
+            <div class="social">
+                <h3>Follow Us</h3>
+                <a href="https://www.facebook.com/pages/category/Education-Website/1Stopai-102490171820303/" target="_black"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/company/1stop-ai/?originalSubdomain=in" target="_black"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/1stop.ai/?hl=en" target="_black"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://twitter.com/onestopai?lang=en" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            </div>
+            <div class="contact">
+                <h3>Contact Us</h3>
+                <a href="https://api.WhatsApp.com/send?phone=+919929783465" target="_black"><i class="fa fa-user" aria-hidden="true"></i></a>
+                <a href="tel: +919929783465"><i class="fa fa-mobile" aria-hidden="true"></i></a>
+                <a href="mailto: support@1stop.ai"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+            </div>
+            <hr>
+            <p>Copyright &copy; 2021 Create. All rights reserved</p>
+        </footer>
+
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwMeqdDvbjTh7iAngD2gMdVQCZoAAMYxzqk1ID-aqThr9Vl5P8kttdWhCDoidQvog/exec'
+            const form = document.forms['submit-google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Review successfully submitted"))
+                .catch(error => console.error('Error!', error.message))
+            })
+        </script>
+    </body>
+</html>

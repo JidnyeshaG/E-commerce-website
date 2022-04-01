@@ -1,0 +1,185 @@
+<html>
+    <head>
+        <title> Login</title>
+        
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="style.css">
+
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    </head>
+    <body>
+
+        <nav class="nav nav_top abt">
+            <div class="logo">
+               <a href="E-commerce.html"><img src="Logo.jpg" width="50"></a>
+               <a href="E-commerce.html">VENUS FURNITURES</a>
+            </div>
+            <div class="nav_side active">
+                <a href="E-commerce.html">Home</a>
+                <a href="Login.html">Login/Sign up</a>    
+                <a href="Register.html">Register</a>
+                <a href="about.html">About Us</a>
+                <a href="service.html">Services</a>
+                <a href="contact.html">Contact</a>
+                
+            </div>
+        </nav>
+
+        <form class="login_form" id="dataForm" onsubmit="return validation()" >
+            <div class="format">
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label" id="email">Email address</label>
+                <input type="email" class="form-control" id="email1" name="email" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label" id="passwd">Password</label>
+                <input type="password" class="form-control" name="pwd" id="pwd">
+              </div>
+              
+            </div>
+            <button type="button" id="inpBtn" class="primary_btn" >submit</button>
+            
+        </form>
+
+        <div id="output"></div>
+
+        <script>
+          
+          const email1=document.getElementById("email1");
+          const pwd=document.getElementById("pwd");
+          const inpBtn=document.getElementById("output");
+
+          inpBtn.onclick=function(){
+              const mail=email1.value;
+              const pass=pwd.value;
+
+              console.log(mail);
+              console.log(pass);
+
+              if(mail && pass){
+                  localStorage=setItem(mail,pass);
+                  location.reload();
+              }
+          };
+
+          for(let i=0;i<localStorage.length;i++){
+            const mail=localStorage.email1(i);
+            const pass=localStorage.pwd(i);
+          }
+
+          /*function display(){
+
+            var mail=document.getElementById("email1").value;
+            var pass=document.getElementById("pwd").value;
+
+            document.write("============================================================== <br>");
+            document.write("                \t YOU SUBMITTED THE FOLLOWING DATA: <br>");
+            document.write("============================================================== <br>");
+            document.write("EMAIL ID: "+mail+"<br>");
+            document.write("PASSWORD: "+pass+"<br>");
+          }
+          
+        function validation()
+        {
+            var email=document.getElementById("email1").value;
+           // var email=document.getElementById("passwd").value;
+            
+            var usercheck= /^[A-Za-z]{3,30}$/;
+            var numbercheck=/^[6789][0-9]{9}$/;
+            var emailcheck=/^[A-Za-z1-9_.]{3}@[A-Za-z]{3}[.]{1}[A-Za-z.]{2,6}$/;
+
+            if(usercheck.test(username))
+            {
+                document.getElementById("error_name").innerHTML=" ";
+            }
+            else
+            {
+                document.getElementById('error_name').innerHTML="Enter valid name";
+                return false;
+            }
+
+            if(numbercheck.test(number))
+            {
+                document.getElementById("error_no").innerHTML=" ";
+            }
+            else
+            {
+                document.getElementById('error_no').innerHTML="Enter valid number";
+                return false;
+            }
+
+            if(emailcheck.test(email))
+            {
+                document.getElementById("error_mail").innerHTML=" ";
+            }
+            else
+            {
+                document.getElementById('error_mail').innerHTML="Enter valid mail id";
+                return false;
+            }
+
+            
+        }*/
+
+    </script>
+
+          <div class="feed">
+            <h2>WRITE A REVIEW</h2>
+            <div class="feed_form">
+                <form name="submit-google-sheet" method="POST">
+                    <input type="text" name="Name" placeholder="Name"><br>
+                    <input type="email" name="Email ID" placeholder="Email ID"><br>
+                    <input type="number" name="Number" placeholder="Contact Number"><br>
+                    <textarea placeholder="Type Your Review Here" rows="5" cols="7" name="Review"></textarea><br>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer_logo">
+                <a href="E-commerce.html"><img src="Logo.jpg" width="150"></a>
+            </div>
+            <div class="pages">
+                <h3>Pages</h3>
+                <a href="E-commerce.html">Home</a>|
+                <a href="Login.html">Login/Sign up</a>|   
+                <a href="Register.html">Register</a>|
+                <a href="about.html">About Us</a>|
+                <a href="service.html">Services</a>
+                
+            </div>
+            <div class="doc">
+                <h3>Documents</h3>
+                <a href="">Privacy Policy</a>|
+                <a href="">Terms Of Service</a>|
+                <a href="">Refund Policy</a>
+            </div>
+            <div class="social">
+                <h3>Follow Us</h3>
+                <a href="https://www.facebook.com/pages/category/Education-Website/1Stopai-102490171820303/" target="_black"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/company/1stop-ai/?originalSubdomain=in" target="_black"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/1stop.ai/?hl=en" target="_black"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://twitter.com/onestopai?lang=en" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            </div>
+            <div class="contact">
+                <h3>Contact Us</h3>
+                <a href="https://api.WhatsApp.com/send?phone=+919929783465" target="_black"><i class="fa fa-user" aria-hidden="true"></i></a>
+                <a href="tel: +919929783465"><i class="fa fa-mobile" aria-hidden="true"></i></a>
+                <a href="mailto: support@1stop.ai"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+            </div>
+            <hr>
+            <p>Copyright &copy; 2021 Create. All rights reserved</p>
+        </footer>
+        
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    </body>
+</html>
